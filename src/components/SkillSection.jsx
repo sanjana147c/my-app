@@ -6,37 +6,61 @@ const categories = [
   {
     title: "Programming Languages",
     icon: "💻",
-    items: ["JavaScript", "Java", "Python", "TypeScript", "HTML/CSS"],
+    items: ["Python", "C++", "C", "Java"],
     glowColor: "cyan-500",
   },
   {
-    title: "Frontend Development",
-    icon: "🖼️",
-    items: ["React", "React Native", "Next.js", "Tailwind CSS"],
+    title: "Artificial Intelligence & Machine Learning",
+    icon: "🤖",
+    items: ["Computer Vision", "GANs", "GNN", "Natural Language Processing"],
     glowColor: "violet-500",
   },
   {
-    title: "Backend Development",
-    icon: "⚙️",
-    items: ["Node.js", "Express.js", "Spring Boot", "REST APIs"],
+    title: "Data Analytics & Visualization",
+    icon: "📊",
+    items: ["Power BI"],
     glowColor: "pink-500",
+  },
+  {
+    title: "Web Development",
+    icon: "🌐",
+    items: ["HTML", "CSS", "JavaScript", "React JS"],
+    glowColor: "blue-500",
+  },
+  {
+    title: "Web Frameworks",
+    icon: "⚙️",
+    items: ["Django", "Flask"],
+    glowColor: "emerald-500",
   },
   {
     title: "Databases",
     icon: "🗄️",
-    items: ["MongoDB", "MySQL", "Firebase", "PostgreSQL"],
-    glowColor: "blue-500",
+    items: ["MySQL", "MongoDB"],
+    glowColor: "orange-500",
   },
   {
-    title: "Tools & Technologies",
-    icon: "🔧",
-    items: ["Git", "Agile/Scrum"],
-    glowColor: "emerald-500",
+    title: "Cloud & DevOps",
+    icon: "☁️",
+    items: ["AWS Lambda"],
+    glowColor: "indigo-500",
   },
   {
-    title: "Design",
-    icon: "🎨",
-    items: ["Figma", "Adobe AI", "UI/UX Design", "Wireframing", "Prototyping"],
+    title: "Operating Systems & Tools",
+    icon: "🖥️",
+    items: [
+      "Linux System Administration (CentOS, Rocky Linux)",
+      "RPM Package Management (YUM/DNF)",
+      "Virtualization (VMware, OVA/OVF packaging)",
+      "Shell Scripting",
+      "Anaconda Installer Customization",
+    ],
+    glowColor: "teal-500",
+  },
+  {
+    title: "Soft Skills",
+    icon: "✨",
+    items: ["Teamwork", "Creativity", "Leadership"],
     glowColor: "yellow-500",
   },
 ];
@@ -69,7 +93,7 @@ export default function SkillsSection() {
         {categories.map((cat, i) => (
           <motion.div
             key={cat.title}
-            className="relative h-full"
+            className="relative"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
@@ -81,27 +105,28 @@ export default function SkillsSection() {
             ></div>
 
             {/* Actual Card */}
-            <div className="relative bg-[#121212] rounded-2xl p-6 border border-gray-700 shadow-lg h-full flex flex-col">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-xl">{cat.icon}</span>
-                <h3 className="text-xl font-semibold text-white">
-                  {cat.title}
-                </h3>
+            <div className="relative bg-[#121212] rounded-2xl p-4 border border-gray-700 shadow-lg h-56 flex flex-col">
+              {/* Header */}
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-base">{cat.icon}</span>
+                <h3 className="text-base font-semibold text-white">{cat.title}</h3>
               </div>
 
-              {/* Items */}
-              <div className="flex flex-wrap gap-2 mt-2">
+              {/* Items (scrollable if overflow) */}
+              <div className="flex flex-wrap gap-1 overflow-y-auto pr-2 custom-scrollbar">
                 {cat.items.map((item) => (
                   <motion.span
                     key={item}
-                    className="px-3 py-1 rounded-full bg-[#1a1f29] text-sm text-gray-300 border border-gray-700"
-                    whileHover={{ scale: 1.1 }}
+                    className="px-2 py-1 rounded-full bg-[#1a1f29] text-xs text-gray-300 border border-gray-700"
+                    whileHover={{ scale: 1.05 }}
                   >
                     {item}
                   </motion.span>
                 ))}
               </div>
             </div>
+
+
           </motion.div>
         ))}
       </div>
