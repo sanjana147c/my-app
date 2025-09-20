@@ -45,7 +45,7 @@ export default function App() {
           <SkillsSection />
         </section>
 
-        <section id="skills">
+        <section id="experience">
           <ExperienceTimeline />
         </section>
 
