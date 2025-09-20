@@ -5,6 +5,7 @@ import "./App.css";
 import Threads from "./components/Threads";
 import ProjectSlider from "./components/ProjectSlider";
 import SkillsSection from "./components/SkillSection";
+import ExperienceTimeline from "./components/ExperienceTimeline";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <AboutSection />
         <ProjectSlider />
         <SkillsSection />
+        <ExperienceTimeline />
       </div>
     </div>
   );

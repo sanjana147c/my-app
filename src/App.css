@@ -9,7 +9,7 @@ html, body, #root {
 
 
 /* Bluish spotlight */
-#root::before {
+/* #root::before {
   content: '';
   position: absolute;
   top: 25%;
@@ -21,10 +21,10 @@ html, body, #root {
   filter: blur(120px);
   pointer-events: none;
   z-index: 0;
-}
+} */
 
 /* Purplish spotlight */
-#root::after {
+/* #root::after {
   content: '';
   position: absolute;
   top: 70%;
@@ -36,13 +36,13 @@ html, body, #root {
   filter: blur(120px);
   pointer-events: none;
   z-index: 0;
-}
+} */
 
 
 
 
 /* Optional: make spotlight follow mouse (advanced, needs JS) */
-
+/* 
 @keyframes floatSlow {
   0%, 100% {
     transform: translateY(0);
@@ -50,7 +50,7 @@ html, body, #root {
   50% {
     transform: translateY(-20px);
   }
-}
+} */
 
 .animate-float-slow {
   animation: floatSlow 5s ease-in-out infinite;
