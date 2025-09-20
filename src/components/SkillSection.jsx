@@ -49,9 +49,9 @@ const categories = [
     title: "Operating Systems & Tools",
     icon: "🖥️",
     items: [
-      "Linux System Administration (CentOS, Rocky Linux)",
-      "RPM Package Management (YUM/DNF)",
-      "Virtualization (VMware, OVA/OVF packaging)",
+      "Linux System Administration",
+      "RPM Package Management",
+      "Virtualization",
       "Shell Scripting",
       "Anaconda Installer Customization",
     ],
@@ -68,7 +68,6 @@ const categories = [
 export default function SkillsSection() {
   return (
     <section className="relative z-10 text-white py-20 px-6 max-w-6xl mx-auto">
-      {/* Heading */}
       <motion.h2
         className="text-4xl font-bold text-center text-violet-400 mb-6"
         initial={{ opacity: 0, y: 20 }}
@@ -88,7 +87,6 @@ export default function SkillsSection() {
         from frontend to backend and everything in between.
       </motion.p>
 
-      {/* Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat, i) => (
           <motion.div
@@ -97,27 +95,28 @@ export default function SkillsSection() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.03 }}
           >
-            {/* Glow Behind */}
+            {/* Subtle glow */}
             <div
-              className={`absolute inset-0 rounded-2xl border-2 border-${cat.glowColor} blur-sm opacity-40`}
+              className={`absolute inset-0 rounded-2xl border border-${cat.glowColor}/30 blur-sm opacity-40`}
             ></div>
 
-            {/* Actual Card */}
-            <div className="relative bg-[#121212] rounded-2xl p-3 border border-gray-700 shadow-lg h-48 flex flex-col">
-              {/* Header */}
+            {/* Transparent Card */}
+            <div className="relative bg-transparent rounded-2xl p-4 border border-gray-700 shadow-lg flex flex-col h-48 backdrop-blur-sm">
               <div className="flex items-center gap-1 mb-2">
                 <span className="text-sm">{cat.icon}</span>
                 <h3 className="text-sm font-semibold text-white">{cat.title}</h3>
               </div>
 
-              {/* Items (scrollable if overflow) */}
-              <div className="flex flex-wrap gap-1 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
+              {/* Scrollable Tags */}
+              <div className="flex flex-wrap gap-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent">
                 {cat.items.map((item) => (
                   <motion.span
                     key={item}
-                    className="px-2 py-0.5 rounded-2xl bg-[#1a1f29] text-[15px] text-gray-300 border border-gray-700"
+                    className="px-3 py-1 rounded-full text-sm text-white border border-white/20
+                               bg-gradient-to-r from-[#2a255a] to-[#5f2c3e] 
+                               animate-gradient-x"
                     whileHover={{ scale: 1.05 }}
                   >
                     {item}
@@ -125,9 +124,6 @@ export default function SkillsSection() {
                 ))}
               </div>
             </div>
-
-
-
           </motion.div>
         ))}
       </div>
