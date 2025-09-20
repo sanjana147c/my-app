@@ -14,7 +14,7 @@ export default function App() {
       
       {/* Background Threads */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <Threads
+        <Threads  
           amplitude={1.5}
           distance={0}
           enableMouseInteraction={true}
