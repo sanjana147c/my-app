@@ -3,24 +3,25 @@ import {
   HomeIcon,
   UserIcon,
   BriefcaseIcon,
-  WrenchIcon,
+  FolderIcon,
+  WrenchScrewdriverIcon,
   TrophyIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/solid";
 
 function Navbar() {
   const icons = [
-    { Icon: HomeIcon, href: "#" },
-    { Icon: UserIcon, href: "#" },
-    { Icon: BriefcaseIcon, href: "#" },
-    { Icon: WrenchIcon, href: "#" },
-    { Icon: TrophyIcon, href: "#" },
-    { Icon: EnvelopeIcon, href: "#" },
+    { Icon: HomeIcon, href: "#home" },
+    { Icon: UserIcon, href: "#about" },
+    { Icon: FolderIcon, href: "#projects" },
+    { Icon: WrenchScrewdriverIcon, href: "#skills" },
+    { Icon: BriefcaseIcon, href: "#experience" },
+    { Icon: TrophyIcon, href: "#achievements" },
+    { Icon: EnvelopeIcon, href: "#contact" },
   ];
-
   return (
     <div className="w-full flex justify-center mt-6">
-      <nav className="bg-[#242424] text-white px-6 py-3 shadow-lg rounded-full inline-flex">
+      <nav className="bg-[#1d1a24] text-white px-6 py-3 shadow-lg rounded-full inline-flex">
         <div className="flex items-center space-x-6">
           {icons.map(({ Icon, href }, idx) => (
             <a
