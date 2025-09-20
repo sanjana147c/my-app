@@ -105,19 +105,19 @@ export default function SkillsSection() {
             ></div>
 
             {/* Actual Card */}
-            <div className="relative bg-[#121212] rounded-2xl p-4 border border-gray-700 shadow-lg h-56 flex flex-col">
+            <div className="relative bg-[#121212] rounded-2xl p-3 border border-gray-700 shadow-lg h-48 flex flex-col">
               {/* Header */}
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-base">{cat.icon}</span>
-                <h3 className="text-base font-semibold text-white">{cat.title}</h3>
+              <div className="flex items-center gap-1 mb-2">
+                <span className="text-sm">{cat.icon}</span>
+                <h3 className="text-sm font-semibold text-white">{cat.title}</h3>
               </div>
 
               {/* Items (scrollable if overflow) */}
-              <div className="flex flex-wrap gap-1 overflow-y-auto pr-2 custom-scrollbar">
+              <div className="flex flex-wrap gap-1 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
                 {cat.items.map((item) => (
                   <motion.span
                     key={item}
-                    className="px-2 py-1 rounded-full bg-[#1a1f29] text-xs text-gray-300 border border-gray-700"
+                    className="px-2 py-0.5 rounded-2xl bg-[#1a1f29] text-[15px] text-gray-300 border border-gray-700"
                     whileHover={{ scale: 1.05 }}
                   >
                     {item}
@@ -125,6 +125,7 @@ export default function SkillsSection() {
                 ))}
               </div>
             </div>
+
 
 
           </motion.div>
