@@ -8,7 +8,8 @@ export default function AboutSection() {
         About Me
       </h2>
       <p className="text-center text-lg text-gray-300 mb-12">
-        i am testing this out 
+        Passionate AI/ML Engineer and Full Stack Developer with expertise in
+        building intelligent systems and scalable web applications.
       </p>
 
       {/* Grid: Education and Resume */}
